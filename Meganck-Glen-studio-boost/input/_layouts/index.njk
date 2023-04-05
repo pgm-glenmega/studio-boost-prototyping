@@ -1,0 +1,64 @@
+{% import "../_partials/_hero.njk" as component %}
+
+
+{% extends "./base-transparent.njk" %}
+
+{% block main %}
+{{component.hero(title, video, description)}}
+<section class="intro__heading">
+    <h1>Ons meeste recente werk</h1>
+    <p>Van webshop tot een interactieve applicatie. Bij Studio Boost is ‘the sky the limit’. Wij realiseren jullie
+        droomproject en plaatsen je bedrijf in een nieuw jasje.</p>
+</section>
+
+{% block grid %}
+<article class="allprojects">
+    {% for item in collections[iterator] %}
+    <section class="grid__single">
+        <a href="{{item.page.url }}">
+            <img src="/img/{{item.data.gridimage }}" alt="projecten">
+            <span>{{item.data.gridsubtitle}}</span>
+            {%if item.data.detailtitle %}
+            <p>{{item.data.detailtitle}}</p>
+            {%endif %}
+        </a>
+    </section>
+    {% endfor %}
+</article>
+{% endblock grid %}
+
+<article class="home__intro">
+    <img class="intro__image" src="img/homedecoration.png" alt="">
+
+    <section class="intro__text">
+        <h2>Wie zijn wij?</h2>
+        <p>Studio Boost is een creatief bureau dat gespecialiseerd is in het ontwerpen en ontwikkelen van websites,
+            webshops en logo’s.</p>
+        <p>Het bureau heeft een passie voor het creëren van unieke en aantrekkelijke ontwerpen die
+            passen bij de visie en missie van hun klanten. Ze werken nauw samen met hun klanten om ervoor te zorgen dat
+            elk ontwerp volledig op maat gemaakt is en voldoet aan de behoeften van het bedrijf.</p>
+        <p>Het team van Studio Boost bestaat uit getalenteerde ontwerpers en ontwikkelaars die ervaring hebben met het
+            werken met diverse
+            industrieën.</p>
+        <a class="button" href="/over">Over Studio Boost</a>
+    </section>
+</article>
+
+<article class="news__container">
+    <h2>Nieuws</h2>
+    <p>Blijf op de hoogte met de laatste nieuwtjes of leer bij met onze interessante blog-artikels.</p>
+</article>
+
+<article class="partner__container">
+    <h1>We werkten al eerder samen met</h1>
+    <section class="partners">
+        <img src="img/adidas-9.svg" alt="">
+        <img src="img/amazon-2.svg" alt="">
+        <img src="img/apple-music.svg" alt="">
+        <img src="img/audi-3.svg" alt="">
+        <img src="img/redbullenergydrink.svg" alt="">
+        <img src="img/yahoo.svg" alt="">
+    </section>
+</article>
+
+{% endblock main %}

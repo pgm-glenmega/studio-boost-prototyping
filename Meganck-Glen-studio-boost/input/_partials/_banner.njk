@@ -1,0 +1,15 @@
+{% macro banner(title, description) %}
+<section class="banner">
+    <div class="banner__text">
+        <h1 class="title title--large">
+            {{ title }}
+        </h1>
+
+        <p class="banner__paragraph">
+            {{ description }}
+        </p>
+    </div>
+</section>
+
+<link href="/styles/banner.css" rel="stylesheet" />
+{% endmacro %}

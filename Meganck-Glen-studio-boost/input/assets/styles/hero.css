@@ -1,0 +1,46 @@
+:root {
+    --bright-white: #ffff;
+    --dark-black: #000000;
+    --spacing-sm: .5rem;
+    --spacing-base: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --rounded-base: 1rem;
+    --text-base: 1rem;
+    --text-md: 1.5rem;
+    --text-lg: 2rem;
+    --text-lgm: 3rem;
+    --text-xl: 4rem;
+}
+
+.hero img{
+    max-width: 1460px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.hero{
+    position: relative;
+    transform: translateY(-5rem);
+    z-index: -1;
+}
+
+.hero__text{
+    position: absolute;
+    bottom: 5rem;
+    left: 8rem;
+    color: white;
+}
+
+.hero__text h1{
+    font-size: var(--text-lgm);
+    font-weight: bold;
+}
+
+.hero__text p{
+    width: 30rem;
+}
+
+.hero_description{
+    padding-top: 0;
+}

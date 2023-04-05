@@ -1,0 +1,11 @@
+{% import "../_partials/_hero-detail.njk" as component %}
+
+{% extends "./base-transparent.njk" %}
+
+{% block main %}
+{{component.hero(title, image, description, subtitle)}}
+
+<article class="project_container--detail">
+        {{content | safe}}
+</article>
+{% endblock main %}

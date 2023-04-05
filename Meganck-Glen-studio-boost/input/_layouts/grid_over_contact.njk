@@ -1,0 +1,46 @@
+{% extends "./base.njk" %}
+
+{% block main %}
+
+<div class="grid__row">
+    <section class="text__block--top">
+        <h1>{{textstrong}}</h1>
+        <ul>
+            {% if email  %}
+            <li>{{ email }}</li>
+            {% endif %}
+
+            {% if telephone  %}
+            <li>{{telephone}}</li>
+            {% endif %}
+
+            {% if telephone  %}
+            <li>{{adress}}</li>
+            {% endif %}
+
+        </ul>
+
+    </section>
+
+    <section class="contact__image--top">
+        <img src="/img/{{topblock__image}}" alt="{{imagetext--top}}">
+    </section>
+</div>
+
+<div class="grid__row">
+    <section>
+        <img src="/img/{{bottomblock__image}}" alt="{{imagetext--bottom}}">
+    </section>
+
+
+    <section class="text__block--bottom">
+        <p>{{textbottom}}</p>
+    </section>
+</div>
+
+{% if paragraph %}
+    
+<p class="paragraph--bottom">{{ paragraph }}</p>
+{% endif %}
+
+{%endblock main %}

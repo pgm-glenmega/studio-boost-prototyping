@@ -1,0 +1,49 @@
+<footer class="footer">
+    <div class="footer_container">
+        <div class="footer footer__column column-left">
+            <strong class="footer__title">
+                Studio boost
+            </strong>
+
+            <p>Studio Boost is een creatief bureau gespecialiseerd in het ontwerpen en ontwikkelen van websites,
+                webshops en
+                logo's.</p>
+
+            <p>Heb je een idee of vraag? Aarzel niet om ons een mailtje te sturen via info@studioboost.be</p>
+
+
+            <ul class="menu menu--vertical columns__column list list--unstyled">
+                {% for social in socials %}
+                <li class="menu__item">
+                    <a target="_blank" rel="noopener noreferrer" class="menu__link" href="{{ social.url }}">
+                        <img src="{{ social.img }}" alt="">
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <nav class="columns columns__column">
+            <ul class="footer__menu">
+                {% for nav_item in collections.nav %}
+                <li class="menu__item">
+                    <a class="menu__link {% if page.url == nav_item.page.url %} {% endif %}"
+                        href="{{ nav_item.page.url }}">
+                        {{ nav_item.data.nav }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+
+    <hr />
+
+    <section class="footer__small">
+        <small>@copyright 2023 - Studio Boost</small>
+        <div class="footer__small--column">
+            <small>Cookies</small>
+            <small>Privacy</small>
+        </div>
+    </section>
+</footer>

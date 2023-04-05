@@ -1,0 +1,20 @@
+{% macro hero(title, video, description) %}
+<section class="hero">
+    <video controls autoplay loop>
+        <source type="video/mp4" src="img/{{ video }}">
+
+
+    </video>
+    <div class="hero__text">
+        <h1 class="title title--large">
+            {{ title }}
+        </h1>
+
+        <p>
+            {{ description }}
+        </p>
+    </div>
+</section>
+
+<link href="/styles/hero.css" rel="stylesheet" />
+{% endmacro %}

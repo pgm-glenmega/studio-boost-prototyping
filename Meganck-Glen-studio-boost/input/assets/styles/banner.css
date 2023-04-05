@@ -1,0 +1,17 @@
+.banner__text {
+    display: flex;
+    background-color: #000000;
+    color: #ffff;
+    height: 360px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.banner__text p {
+    width: 30rem;
+}
+
+.banner__paragraph {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}

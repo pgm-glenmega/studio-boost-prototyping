@@ -1,0 +1,16 @@
+[{
+        "name": "Instagram",
+        "url": "https://www.instagram.com",
+        "img": "/img/instagram.svg"
+    },
+    {
+        "name": "Facebook",
+        "url": "https://www.facebook.com",
+        "img": "/img/facebook.svg"
+    },
+    {
+        "name": "LinkedIn",
+        "url": "https://www.linkedin.com",
+        "img": "/img/linkedin.svg"
+    }
+]

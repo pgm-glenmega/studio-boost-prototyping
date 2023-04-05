@@ -1,0 +1,17 @@
+{% macro hero(title, image, description, subtitle) %}
+<section class="hero">
+    <img src="/img/{{ image }}" alt="">
+    <div class="hero__text">
+        <p class="subtitle">{{ subtitle }}</p>
+        <h1 class="title title--large">
+            {{ title }}
+        </h1>
+
+        <p class="hero_description">
+            {{ description }}
+        </p>
+    </div>
+</section>
+
+<link href="/styles/hero.css" rel="stylesheet" />
+{% endmacro %}

@@ -1,0 +1,25 @@
+{% import "../_partials/_banner.njk" as components  %}
+
+{% extends "./base-black.njk" %}
+
+
+{% block main %}
+
+{{components.banner(title, description)}}
+
+{% block grid %}
+<article class="allprojects">
+    {% for item in collections[iterator] %}
+    <section class="grid__single">
+        <a href="{{item.page.url }}">
+            <img src="/img/{{item.data.gridimage }}" alt="projecten">
+            <span>{{item.data.gridsubtitle}}</span>
+            {%if item.data.detailtitle %}
+            <p>{{item.data.detailtitle}}</p>
+            {%endif %}
+        </a>
+    </section>
+    {% endfor %}
+</article>
+{% endblock grid %}
+{%endblock main %}

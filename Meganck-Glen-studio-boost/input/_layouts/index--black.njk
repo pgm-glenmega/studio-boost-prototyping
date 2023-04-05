@@ -1,0 +1,8 @@
+{% import "../_partials/_banner.njk" as component %}
+
+{% extends "./base-black.njk" %}
+
+
+{% block main %}
+{{component.banner(title, description)}}
+{% endblock main %}
